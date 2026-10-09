@@ -44,6 +44,7 @@ a {
 }
 
 .brand-mark {
+  position: relative;
   width: 34px;
   height: 34px;
   display: inline-grid;
@@ -55,6 +56,17 @@ a {
   font-size: 1.3rem;
   font-style: italic;
   letter-spacing: 0;
+}
+
+.brand-initial {
+  position: absolute;
+  right: 0.22em;
+  bottom: 0.18em;
+  font-family: Georgia, serif;
+  font-size: 0.25em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .eyebrow {

@@ -43,6 +43,7 @@ button {
 
 .brand-mark,
 .welcome-mark {
+  position: relative;
   width: 42px;
   height: 42px;
   display: inline-grid;
@@ -53,6 +54,17 @@ button {
   font-family: Georgia, serif;
   font-size: 1.55rem;
   font-style: italic;
+}
+
+.brand-initial {
+  position: absolute;
+  right: 0.22em;
+  bottom: 0.18em;
+  font-family: Georgia, serif;
+  font-size: 0.25em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .brand-mark {
