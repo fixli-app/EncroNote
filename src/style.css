@@ -58,12 +58,12 @@ button {
 
 .brand-initial {
   position: absolute;
-  right: 0.22em;
-  bottom: 0.18em;
+  right: 0.3em;
+  bottom: 0.25em;
   font-family: Georgia, serif;
-  font-size: 0.42em;
+  font-size: 0.48em;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
 }
 

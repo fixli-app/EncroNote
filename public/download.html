@@ -48,16 +48,23 @@
       </section>
 
       <details class="security-info">
-        <summary>How your privacy works</summary>
+        <summary>App security &amp; privacy</summary>
         <div class="info-content">
           <p>
-            The Android app encrypts notes locally and does not send them to this
-            website. The website only distributes the app installer.
+            Notes are encrypted on your device with AES-256-GCM. Your master
+            password is needed to unlock the vault. EncroNote has no account,
+            notes server, or cloud sync.
           </p>
           <p>
-            Direct downloads need a signed APK. Keep the signing key private and
-            use the same key for future updates. Apps can be reverse-engineered,
-            and no app can guarantee protection on a compromised phone.
+            The Android app locks after one minute without activity. If the
+            configured wrong-password limit is reached, the local vault is
+            deleted. That limit does not slow guesses against a stolen copy of
+            the encrypted vault.
+          </p>
+          <p>
+            No app can promise absolute protection. A weak password may be
+            guessed offline, and a compromised phone or a device observed while
+            the vault is open may expose notes.
           </p>
         </div>
       </details>

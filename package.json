@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prepare-android-site.mjs",
+    "build:app": "vite build",
     "preview": "vite preview",
     "cap:sync": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cap-sync.ps1",
     "android:release": "npm run cap:sync && cd android && gradlew.bat assembleRelease",

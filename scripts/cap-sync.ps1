@@ -3,9 +3,9 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 Set-Location $repoRoot
 
-& npm.cmd run build
+& npm.cmd run build:app
 if ($LASTEXITCODE -ne 0) {
-  throw "Website build failed with exit code $LASTEXITCODE."
+  throw "App build failed with exit code $LASTEXITCODE."
 }
 
 foreach ($apkName in @('EncroNote.apk', 'private-notes-android.apk')) {

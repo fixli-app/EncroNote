@@ -60,12 +60,12 @@ a {
 
 .brand-initial {
   position: absolute;
-  right: 0.22em;
-  bottom: 0.18em;
+  right: 0.3em;
+  bottom: 0.25em;
   font-family: Georgia, serif;
-  font-size: 0.42em;
+  font-size: 0.48em;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -161,10 +161,29 @@ h1 {
 }
 
 .security-info summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #777970;
   cursor: pointer;
   font-size: 0.78rem;
   font-weight: 600;
+  list-style: none;
+}
+
+.security-info summary::-webkit-details-marker {
+  display: none;
+}
+
+.security-info summary::after {
+  content: '+';
+  color: #92938b;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.security-info[open] summary::after {
+  content: '−';
 }
 
 .info-content {
