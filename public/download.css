@@ -63,9 +63,9 @@ a {
   right: 0.22em;
   bottom: 0.18em;
   font-family: Georgia, serif;
-  font-size: 0.25em;
-  font-style: normal;
-  font-weight: 700;
+  font-size: 0.42em;
+  font-style: italic;
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -113,14 +113,8 @@ h1 {
   text-decoration: none;
 }
 
-.download-button:not(.is-disabled):hover {
+.download-button:hover {
   background: #45473f;
-}
-
-.download-button.is-disabled {
-  background: #deded8;
-  color: #777970;
-  cursor: not-allowed;
 }
 
 .download-status {
@@ -180,11 +174,4 @@ h1 {
   color: #777970;
   font-size: 0.76rem;
   line-height: 1.6;
-}
-
-.web-link {
-  display: inline-block;
-  margin-top: 28px;
-  color: #777970;
-  font-size: 0.78rem;
 }
