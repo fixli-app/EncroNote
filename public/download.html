@@ -51,20 +51,35 @@
         <summary>App security &amp; privacy</summary>
         <div class="info-content">
           <p>
-            Notes are encrypted on your device with AES-256-GCM. Your master
-            password is needed to unlock the vault. EncroNote has no account,
-            notes server, or cloud sync.
+            Your notes are encrypted on this device with AES-256-GCM. A random
+            data key is encrypted with a key derived from your password using
+            PBKDF2-SHA-256 (600,000 iterations). Only the encrypted key and
+            encrypted vault are stored on this device. Only the encrypted vault
+            is saved in this app’s local storage; there is no account server,
+            database, analytics, or cloud sync.
           </p>
           <p>
-            The Android app locks after one minute without activity. If the
-            configured wrong-password limit is reached, the local vault is
-            deleted. That limit does not slow guesses against a stolen copy of
-            the encrypted vault.
+            The app locks after one minute without activity and when it leaves
+            the foreground. Android failed-attempt state is encrypted with an
+            Android Keystore key and synchronously committed before a failed
+            login is reported. A reached limit leaves a secure lockout marker
+            and disables creating a replacement vault. Rooted/jailbroken
+            devices and instrumented app code remain outside this protection.
+            Choose a long, unique password.
           </p>
           <p>
-            No app can promise absolute protection. A weak password may be
-            guessed offline, and a compromised phone or a device observed while
-            the vault is open may expose notes.
+            This is client-side software, so its published source can be
+            inspected and reverse-engineered. Someone with a copy of the
+            encrypted vault can guess passwords offline; the failed-attempt
+            limit cannot stop that. A compromised phone or altered app can
+            expose notes. No app can guarantee protection from coercion,
+            keyloggers, or every storage copy. Do not rely on this app as the
+            only protection for information whose exposure could put you in
+            danger.
+          </p>
+          <p>
+            Keep your device updated and use its screen lock. Native vault data
+            is local to this app and does not synchronize.
           </p>
         </div>
       </details>
