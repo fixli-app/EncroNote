@@ -1,0 +1,178 @@
+:root {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #282924;
+  background: #f7f7f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.download-shell {
+  width: min(100% - 40px, 470px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 34px 0 42px;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 76px;
+  color: #33352f;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #292b26;
+  color: #fafaf7;
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #92938b;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: clamp(2.5rem, 10vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+  line-height: 1.02;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  color: #777970;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.download-button {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9px;
+  background: #292b26;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.download-button:not(.is-disabled):hover {
+  background: #45473f;
+}
+
+.download-button.is-disabled {
+  background: #deded8;
+  color: #777970;
+  cursor: not-allowed;
+}
+
+.download-status {
+  min-height: 2.8em;
+  margin-top: 10px;
+  color: #777970;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.details {
+  margin-top: 32px;
+  padding-top: 23px;
+  border-top: 1px solid #e5e5df;
+}
+
+.details h2 {
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.details ol {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 20px;
+  color: #777970;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.details p {
+  margin-top: 14px;
+  color: #92938b;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.security-info {
+  margin-top: 26px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e5df;
+}
+
+.security-info summary {
+  color: #777970;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.info-content {
+  display: grid;
+  gap: 10px;
+  margin-top: 13px;
+  color: #777970;
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.web-link {
+  display: inline-block;
+  margin-top: 28px;
+  color: #777970;
+  font-size: 0.78rem;
+}

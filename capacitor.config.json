@@ -1,0 +1,9 @@
+{
+  "appId": "app.privatenotes.local",
+  "appName": "EncroNote",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

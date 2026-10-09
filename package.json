@@ -1,0 +1,24 @@
+{
+  "name": "encrypted-notes-app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "cap:sync": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/cap-sync.ps1",
+    "android:release": "npm run cap:sync && cd android && gradlew.bat assembleRelease",
+    "android:publish": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/publish-android-apk.ps1",
+    "android": "npm run cap:sync && cap open android",
+    "ios": "npm run cap:sync && cap open ios"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.4.3",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@aparajita/capacitor-secure-storage": "^8.0.1",
+    "@capacitor/core": "^8.5.3"
+  }
+}
