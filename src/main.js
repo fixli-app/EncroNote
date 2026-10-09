@@ -478,7 +478,7 @@ function renderAuthScreen() {
   document.querySelector('#app').innerHTML = `
     <main class="auth-shell">
       <section class="auth-panel">
-        <div class="brand-mark" aria-hidden="true">n</div>
+        <div class="brand-mark" aria-hidden="true">e</div>
         <p class="eyebrow">ENCRONOTE</p>
         <h1>${hasVault ? 'Unlock your vault' : 'A quiet place for your thoughts'}</h1>
         <p class="subtitle">
@@ -961,7 +961,7 @@ function renderApp() {
           <textarea id="note-content" placeholder="Start writing..." aria-label="Note content" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">${escapeHtml(active.content || '')}</textarea>
         ` : `
           <div class="welcome">
-            <span class="welcome-mark">n</span>
+            <span class="welcome-mark">e</span>
             <p>${state.search ? 'No matching notes' : 'Nothing here yet'}</p>
             <button type="button" class="text-button" id="empty-new-note">Create a note</button>
           </div>
@@ -1081,7 +1081,7 @@ async function finishLockVault(message = '', forceLock = false) {
     app.innerHTML = `
       <main class="auth-shell">
         <section class="auth-panel" role="status" aria-live="polite">
-          <div class="brand-mark" aria-hidden="true">n</div>
+          <div class="brand-mark" aria-hidden="true">e</div>
           <p class="eyebrow">ENCRONOTE</p>
           <h1>Locking your vault</h1>
           <p class="subtitle">Securing your notes on this device…</p>
