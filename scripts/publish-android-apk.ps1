@@ -25,7 +25,11 @@ if ($LASTEXITCODE -ne 0) {
 
 $downloadDirectory = Join-Path $repoRoot "public\downloads"
 New-Item -ItemType Directory -Path $downloadDirectory -Force | Out-Null
-$destinationApk = Join-Path $downloadDirectory "private-notes-android.apk"
+$destinationApk = Join-Path $downloadDirectory "EncroNote.apk"
 Copy-Item -LiteralPath $sourceApk -Destination $destinationApk -Force
+$legacyApk = Join-Path $downloadDirectory "private-notes-android.apk"
+if (Test-Path -LiteralPath $legacyApk -PathType Leaf) {
+  Remove-Item -LiteralPath $legacyApk -Force
+}
 
 Write-Output "Published verified APK to $destinationApk"

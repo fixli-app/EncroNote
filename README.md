@@ -40,7 +40,7 @@ Android signing/building requires Android Studio and the Android SDK. iOS signin
 
 ## Website and Android download
 
-The existing Vite website deploys directly to Vercel; it does not need to be rewritten in React. The notes app remains at `/`, and `/download` is a separate minimalist Android download page. Vercel can serve the signed installer from `public/downloads/private-notes-android.apk` with the Android APK content type and an attachment download header. The download page keeps its button disabled until that APK is present.
+The existing Vite website deploys directly to Vercel; it does not need to be rewritten in React. The notes app remains at `/`, and `/download` is a separate minimalist Android download page. Vercel can serve the signed installer from `public/downloads/EncroNote.apk` with the Android APK content type and an attachment download header. The download page keeps its button disabled until that APK is present.
 
 Create a release signing key once and store it outside the project and source control. Back it up securely: future app updates must use the same key. Never put the keystore or its passwords in the repository or on the public website. Set these environment variables in the build shell or secret manager:
 
@@ -49,7 +49,7 @@ Create a release signing key once and store it outside the project and source co
 - `ANDROID_KEY_ALIAS`
 - `ANDROID_KEY_PASSWORD`
 
-On Windows, with Android Studio/SDK and Java installed, build a signed release APK with `npm run android:release`. The command fails if signing credentials are missing or the keystore path is invalid. Add the Android SDK `build-tools` directory to `PATH`, then run `npm run android:publish`; this verifies the APK signature and copies it to `public/downloads/private-notes-android.apk`. Commit/push that public APK and deploy the project to Vercel. Android users can then visit `https://<your-vercel-domain>/download`. Increment `versionCode` in `android/app/build.gradle` for each future app release.
+On Windows, with Android Studio/SDK and Java installed, build a signed release APK with `npm run android:release`. The command fails if signing credentials are missing or the keystore path is invalid. Add the Android SDK `build-tools` directory to `PATH`, then run `npm run android:publish`; this verifies the APK signature and copies it to `public/downloads/EncroNote.apk`. Commit/push that public APK and deploy the project to Vercel. Android users can then visit `https://<your-vercel-domain>/download`. Increment `versionCode` in `android/app/build.gradle` for each future app release.
 
 For this Windows development setup, the release key and its local credentials are stored outside the project in `%LOCALAPPDATA%\PrivateNotesSigning\`. Protect and back up both files privately; never upload them. To load the saved credentials into a PowerShell build session without printing them:
 

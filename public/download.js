@@ -1,4 +1,4 @@
-const apkUrl = '/downloads/private-notes-android.apk'
+const apkUrl = '/downloads/EncroNote.apk'
 const downloadButton = document.querySelector('#download-button')
 const downloadStatus = document.querySelector('#download-status')
 

@@ -15,7 +15,7 @@
         },
         {
           "key": "Content-Disposition",
-          "value": "attachment; filename=\"private-notes-android.apk\""
+          "value": "attachment; filename=\"EncroNote.apk\""
         },
         {
           "key": "Cache-Control",
